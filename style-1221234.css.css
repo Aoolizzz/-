@@ -1,0 +1,144 @@
+ * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      border-radius: 8px;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+    header {
+      background: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fdukonrostov.ru%2Fwp-content%2Fuploads%2Fsites%2F15%2F2019%2F03%2F27427.jpg&f=1&nofb=1&ipt=2c1cba32fb73e6ec0f93d5c914003ad1e37875e420c68301e0eb45c4b071289d') center/cover no-repeat;
+      color: white;
+      padding: 150px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    header h1, header p, header button {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    header p {
+      font-style: italic;
+      font-size: 24px;
+      margin: 20px 0;
+    }
+    .cta-button {
+      background-color: #ff7b00;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #e66900;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .services, .advantages, .faq, .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .portfolio-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+    }
+    .portfolio-slider img {
+      max-height: 200px;
+      border-radius: 10px;
+      scroll-snap-align: start;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      height: 100px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer .social-icons img {
+      width: 24px;
+      margin: 0 5px;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 32px;
+      }
+      header p {
+        font-size: 18px;
+      }
+      nav {
+        right: 10px;
+        left: 10px;
+        text-align: center;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+    }
